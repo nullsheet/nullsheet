@@ -1,0 +1,12 @@
+{
+  "name": "nullsheet",
+  "version": "0.0.1",
+  "description": "More style less bullshit",
+  "main": "index.css",
+  "scripts": {
+    "build": "sass index.scss index.css"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}

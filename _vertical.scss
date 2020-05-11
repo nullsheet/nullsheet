@@ -1,0 +1,44 @@
+@import 'medias';
+
+body :not(.x0) {
+  width: 100%;
+  box-sizing: border-box;
+  display: inline-block;
+}
+
+style, script {
+  display: none !important;
+}
+
+@each $m, $media in $medias {
+  @media #{$media} {
+    .#{$m}yt {
+      display: flex !important;
+      align-items: flex-start;
+    }
+    .#{$m}yy {
+      display: flex !important;
+      align-items: center;
+    }
+    .#{$m}yb {
+      display: flex !important;
+      align-items: flex-end;
+    }
+    .#{$m}yt > :not(.x0), .#{$m}yy > :not(.x0), .#{$m}yb > :not(.x0) {
+      display: flex !important;
+    }
+    .#{$m}yy > * {
+      margin-top: auto;
+      margin-bottom: auto;
+    }
+    .#{$m}y0 {
+      height: auto;
+    }
+    @for $i from 1 through 12 {
+      .#{$m}y#{$i} {
+        height: (100vh / 12) * $i !important;
+      }
+    }
+  }
+}
+

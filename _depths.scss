@@ -1,0 +1,11 @@
+@import 'medias';
+
+@each $m, $media in $medias {
+  @media #{$media} {
+    @for $i from 0 through 12 {
+      .#{$m}z#{$i} {
+        z-index: $i * 100;
+      }
+    }
+  }
+}

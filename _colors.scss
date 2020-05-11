@@ -1,0 +1,73 @@
+@import 'medias';
+
+$colors: (
+  "0": "lighest",
+  "1": "light",
+  "2": "primary-light",
+  "3": "primary",
+  "4": "primary-dark",
+  "5": "secondary-light",
+  "6": "secondary",
+  "7": "secondary-dark",
+  "8": "success",
+  "9": "warning",
+  "10": "danger",
+  "11": "dark",
+  "12": "darkest"
+);
+
+$props: (
+  "bc": "border-color",
+  "bg": "background-color",
+  "c": "color"
+);
+
+@each $m, $media in $medias {
+  @media #{$media} {
+    @each $p, $prop in $props {
+      @each $c, $color in $colors {
+        .#{$m}#{$p}#{$c} {
+          #{$prop}: var(--#{$color}-color);
+          @if $p == "bc" {
+            border-width: 1px;
+            border-style: solid;
+          }
+        }
+        @if $p == "bc" {
+          .#{$m}#{$p}#{$c}b {
+            border-bottom-color: var(--#{$color}-color);
+            border-bottom-width: 1px;
+            border-bottom-style: solid;
+          }
+          .#{$m}#{$p}#{$c}t {
+            border-top-color: var(--#{$color}-color);
+            border-top-width: 1px;
+            border-top-style: solid;
+          }
+          .#{$m}#{$p}#{$c}l {
+            border-left-color: var(--#{$color}-color);
+            border-left-width: 1px;
+            border-left-style: solid;
+          }
+          .#{$m}#{$p}#{$c}r {
+            border-right-color: var(--#{$color}-color);
+            border-right-width: 1px;
+            border-right-style: solid;
+          }
+          .#{$m}#{$p}#{$c}x {
+            @extend .#{$m}#{$p}#{$c}r;
+            @extend .#{$m}#{$p}#{$c}l;
+          }
+          .#{$m}#{$p}#{$c}y {
+            @extend .#{$m}#{$p}#{$c}t;
+            @extend .#{$m}#{$p}#{$c}b;
+          }
+        }
+      }
+    }
+  }
+}
+
+body {
+  @extend .c12;
+}

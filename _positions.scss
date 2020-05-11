@@ -1,0 +1,33 @@
+@import 'medias';
+
+$positions: (
+  "f": "fixed",
+  "a": "absolute",
+  "r": "relative"
+);
+
+$axesy: (
+  "t": "top",
+  "b": "bottom"
+);
+
+$axesx: (
+  "l": "left",
+  "r": "right"
+);
+
+@each $m, $media in $medias {
+  @media #{$media} {
+    @each $p, $position in $positions {
+      @each $y, $axisy in $axesy {
+        @each $x, $axisx in $axesx {
+          .#{$m}#{$p}#{$y}#{$x} {
+            position: #{$position};
+            #{$axisx}: 0;
+            #{$axisy}: 0;
+          }
+        }
+      }
+    }
+  }
+}

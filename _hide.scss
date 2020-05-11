@@ -1,0 +1,9 @@
+@import 'medias';
+
+@each $m, $media in $medias {
+  @media #{$media} {
+    .#{$m}off {
+      display: none !important;
+    }
+  }
+}

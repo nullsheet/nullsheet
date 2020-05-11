@@ -1,0 +1,32 @@
+$directions: (
+  "l": "flex-start",
+  "x": "center",
+  "r": "flex-right",
+);
+
+@each $d, $direction in $directions {
+  .xx#{$d} {
+    display: flex !important;
+    flex-wrap: wrap;
+    text-align: center;
+    justify-content: #{$direction};
+  }
+  @media (min-width: 992px) {
+    .xx#{$d} {
+      max-width: 960px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+  @media (min-width: 1200px) {
+    .xx#{$d} {
+      max-width: 1140px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+  .xx#{$d} > * {
+    display: flex !important;
+    width: 100%;
+  }
+}

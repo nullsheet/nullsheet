@@ -1,0 +1,65 @@
+.ff1 {
+    font-weight: 300;
+    font-family: var(--primary-family);
+  }
+  
+  .ff2 {
+    font-weight: 300;
+    font-style: italic;
+    font-family: var(--primary-family);
+  }
+  
+  .ff3 {
+    font-family: var(--primary-family);
+  }
+  
+  .ff4 {
+    font-style: italic;
+    font-family: var(--primary-family);
+  }
+  
+  .ff5 {
+    font-weight: 700;
+    font-family: var(--primary-family);
+  }
+  
+  .ff6 {
+    font-weight: 700;
+    font-style: italic;
+    font-family: var(--primary-family);
+  }
+
+  .ff7 {
+    font-weight: 300;
+    font-family: var(--secondary-family);
+  }
+  
+  .ff8 {
+    font-weight: 300;
+    font-style: italic;
+    font-family: var(--secondary-family);
+  }
+  
+  .ff9 {
+    font-family: var(--secondary-family);
+  }
+  
+  .ff10 {
+    font-style: italic;
+    font-family: var(--secondary-family);
+  }
+  
+  .ff11 {
+    font-weight: 700;
+    font-family: var(--secondary-family);
+  }
+  
+  .ff12 {
+    font-weight: 700;
+    font-style: italic;
+    font-family: var(--secondary-family);
+  }
+  
+  body {
+    @extend .ff9;
+  }

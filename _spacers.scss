@@ -1,0 +1,53 @@
+@import 'medias';
+
+$spacers: (
+  "m": "margin",
+  "p": "padding",
+);
+
+$steps: (
+  1: 0.25rem,
+  2: 0.5rem,
+  3: 0.75rem,
+  4: 1rem,
+  5: 1.5rem,
+  6: 2rem,
+  7: 3rem,
+  8: 4rem,
+  9: 6rem,
+  10: 8rem,
+  11: 12rem,
+  12: 16rem,
+);
+
+@each $m, $media in $medias {
+  @media #{$media} {
+    @each $s, $spacer in $spacers {
+      @each $i, $step in $steps {
+        .#{$m}#{$s}#{$i} {
+          #{$spacer}: $step !important;
+        }
+        .#{$m}#{$s}#{$i}l {
+          #{$spacer}-left: $step !important;
+        }
+        .#{$m}#{$s}#{$i}r {
+          #{$spacer}-right: $step !important;
+        }
+        .#{$m}#{$s}#{$i}t {
+          #{$spacer}-top: $step !important;
+        }
+        .#{$m}#{$s}#{$i}b {
+          #{$spacer}-bottom: $step !important;
+        }
+        .#{$m}#{$s}#{$i}y {
+          @extend .#{$m}#{$s}#{$i}b;
+          @extend .#{$m}#{$s}#{$i}t;
+        }
+        .#{$m}#{$s}#{$i}x {
+          @extend .#{$m}#{$s}#{$i}l;
+          @extend .#{$m}#{$s}#{$i}r;
+        }
+      }
+    }  
+  }
+}

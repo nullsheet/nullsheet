@@ -1,0 +1,23 @@
+@import 'medias';
+
+@each $m, $media in $medias {
+  @media #{$media} {
+    .#{$m}f0 {
+      overflow: hidden;
+      text-indent: -9999px;
+    }
+    @for $i from 1 through 12 {
+      .#{$m}f#{$i} {
+        font-size: calc(0.5rem + #{$i} * var(--font-size));
+      }
+    }  
+  }
+}
+
+body {
+  @extend .f2;
+}
+
+small {
+  @extend .f1;
+}

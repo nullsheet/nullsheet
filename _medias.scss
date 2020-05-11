@@ -1,0 +1,21 @@
+$xs: 0px;
+$sm: 576px;
+$md: 768px;
+$lg: 992px;
+$xl: 1200px;
+
+$medias: (
+  "": "(min-width: #{$xs})",
+  "xs\\:": "(max-width: #{$sm})",
+  "sm\\-": "(max-width: #{$md})",
+  "sm\\:": "(min-width: #{$sm}) and (max-width: #{$md})",
+  "sm\\+": "(min-width: #{$sm})",
+  "md\\-": "(max-width: #{$lg})",
+  "md\\:": "(min-width: #{$md}) and (max-width: #{$lg})",
+  "md\\+": "(min-width: #{$md})",
+  "lg\\-": "(max-width: #{$xl})",
+  "lg\\:": "(min-width: #{$lg}) and (max-width: #{$xl})",
+  "lg\\+": "(min-width: #{$lg})",
+  "xl\\:": "(min-width: #{$xl})",
+  "print\\:": "print"
+);
