@@ -14,15 +14,15 @@ style, script {
   @media #{$media} {
     .#{$m}yt {
       display: flex !important;
-      align-items: flex-start;
+      align-content: flex-start;
     }
     .#{$m}yy {
       display: flex !important;
-      align-items: center;
+      align-content: center;
     }
     .#{$m}yb {
       display: flex !important;
-      align-items: flex-end;
+      align-content: flex-end;
     }
     .#{$m}yt > :not(.x0), .#{$m}yy > :not(.x0), .#{$m}yb > :not(.x0) {
       display: flex !important;
