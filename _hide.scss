@@ -2,7 +2,7 @@
 
 @each $m, $media in $medias {
   @media #{$media} {
-    .#{$m}off {
+    .#{$m}off:not(.on) {
       display: none !important;
     }
   }

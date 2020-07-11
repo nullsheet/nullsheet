@@ -17,5 +17,5 @@ $medias: (
   "lg\\:": "(min-width: #{$lg}) and (max-width: #{$xl})",
   "lg\\+": "(min-width: #{$lg})",
   "xl\\:": "(min-width: #{$xl})",
-  "print\\:": "print"
+  "pt\\:": "print"
 );
