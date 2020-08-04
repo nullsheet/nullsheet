@@ -32,7 +32,7 @@ style, script {
       margin-bottom: auto;
     }
     .#{$m}y0 {
-      height: auto;
+      height: min-content;
     }
     @for $i from 1 through 12 {
       .#{$m}y#{$i} {

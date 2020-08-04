@@ -26713,7 +26713,7 @@ style, script {
     margin-bottom: auto; }
 
   .y0 {
-    height: auto; }
+    height: min-content; }
 
   .y1 {
     height: 8.3333333333vh !important; }
@@ -26771,7 +26771,7 @@ style, script {
     margin-bottom: auto; }
 
   .xs\:y0 {
-    height: auto; }
+    height: min-content; }
 
   .xs\:y1 {
     height: 8.3333333333vh !important; }
@@ -26829,7 +26829,7 @@ style, script {
     margin-bottom: auto; }
 
   .sm\-y0 {
-    height: auto; }
+    height: min-content; }
 
   .sm\-y1 {
     height: 8.3333333333vh !important; }
@@ -26887,7 +26887,7 @@ style, script {
     margin-bottom: auto; }
 
   .sm\:y0 {
-    height: auto; }
+    height: min-content; }
 
   .sm\:y1 {
     height: 8.3333333333vh !important; }
@@ -26945,7 +26945,7 @@ style, script {
     margin-bottom: auto; }
 
   .sm\+y0 {
-    height: auto; }
+    height: min-content; }
 
   .sm\+y1 {
     height: 8.3333333333vh !important; }
@@ -27003,7 +27003,7 @@ style, script {
     margin-bottom: auto; }
 
   .md\-y0 {
-    height: auto; }
+    height: min-content; }
 
   .md\-y1 {
     height: 8.3333333333vh !important; }
@@ -27061,7 +27061,7 @@ style, script {
     margin-bottom: auto; }
 
   .md\:y0 {
-    height: auto; }
+    height: min-content; }
 
   .md\:y1 {
     height: 8.3333333333vh !important; }
@@ -27119,7 +27119,7 @@ style, script {
     margin-bottom: auto; }
 
   .md\+y0 {
-    height: auto; }
+    height: min-content; }
 
   .md\+y1 {
     height: 8.3333333333vh !important; }
@@ -27177,7 +27177,7 @@ style, script {
     margin-bottom: auto; }
 
   .lg\-y0 {
-    height: auto; }
+    height: min-content; }
 
   .lg\-y1 {
     height: 8.3333333333vh !important; }
@@ -27235,7 +27235,7 @@ style, script {
     margin-bottom: auto; }
 
   .lg\:y0 {
-    height: auto; }
+    height: min-content; }
 
   .lg\:y1 {
     height: 8.3333333333vh !important; }
@@ -27293,7 +27293,7 @@ style, script {
     margin-bottom: auto; }
 
   .lg\+y0 {
-    height: auto; }
+    height: min-content; }
 
   .lg\+y1 {
     height: 8.3333333333vh !important; }
@@ -27351,7 +27351,7 @@ style, script {
     margin-bottom: auto; }
 
   .xl\:y0 {
-    height: auto; }
+    height: min-content; }
 
   .xl\:y1 {
     height: 8.3333333333vh !important; }
@@ -27409,7 +27409,7 @@ style, script {
     margin-bottom: auto; }
 
   .pt\:y0 {
-    height: auto; }
+    height: min-content; }
 
   .pt\:y1 {
     height: 8.3333333333vh !important; }
