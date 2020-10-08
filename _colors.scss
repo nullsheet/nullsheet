@@ -1,26 +1,72 @@
+
 @import 'medias';
 @import 'states';
 
+:root {
+
+  /*identity colors*/
+  --primary-color: #6b46c1;
+  --primary-light-color: #8560fc;
+  --primary-dark-color: #4d3793;
+  --secondary-color: #2ee9b4;
+  --secondary-light-color: #69f9cc;
+  --secondary-dark-color: #009B6F;
+  --tertiary-color: #2ee9b4;
+  --tertiary-light-color: #69f9cc;
+  --tertiary-dark-color: #009B6F;
+
+  /*semantic colors*/
+  --success-color: #28a745;
+  --success-light-color: #28a745;
+  --success-dark-color: #28a745;
+  --warning-color: #ffc107;
+  --warning-light-color: #ffc107;
+  --warning-dark-color: #ffc107;
+  --danger-color: #dc3545;
+  --danger-light-color: #dc3545;
+  --danger-dark-color: #dc3545;
+
+  /*markup colors*/
+  --soft-color: #fff;
+  --soft-light-color: transparent;
+  --soft-dark-color: #f1f1f1;
+  --neutral-color: rgb(0,0,0,0.6);
+  --neutral-light-color: rgb(0,0,0,0.6);
+  --neutral-dark-color: rgb(0,0,0,0.6);
+  --heavy-color: rgb(0,0,0,0.6);
+  --heavy-light-color: rgb(0,0,0,0.6);
+  --heavy-dark-color: rgb(0,0,0,0.6);
+
+}
+
 $colors: (
-  "0": "lighest",
-  "1": "light",
-  "2": "primary-light",
-  "3": "primary",
-  "4": "primary-dark",
-  "5": "secondary-light",
-  "6": "secondary",
-  "7": "secondary-dark",
-  "8": "success",
-  "9": "warning",
-  "10": "danger",
-  "11": "dark",
-  "12": "darkest"
+  "i1": "primary",
+  "i2": "secondary",
+  "i3": "tertiary",
+  "s1": "success",
+  "s2": "warning",
+  "s3": "danger",
+  "m1": "soft",
+  "m2": "neutral",
+  "m3": "heavy"
 );
 
 $props: (
   "bc": "border-color",
   "bg": "background-color",
   "c": "color"
+);
+
+$sides: (
+  "t": "top",
+  "b": "bottom",
+  "l": "left",
+  "r": "right"
+);
+
+$variations: (
+  "l": "light",
+  "d": "dark"
 );
 
 @each $m, $media in $medias {
@@ -30,31 +76,22 @@ $props: (
         @each $c, $color in $colors {
           .#{$m}#{$p}#{$c}#{$s}#{$state} {
             #{$prop}: var(--#{$color}-color);
+            #{"--"}#{$p}#{"-light-color"}: var(--#{$color}-light-color);
+            #{"--"}#{$p}#{"-dark-color"}: var(--#{$color}-dark-color);
             @if $p == "bc" {
               border-width: 1px;
               border-style: solid;
             }
           }
           @if $p == "bc" {
-            .#{$m}#{$p}#{$c}b#{$s}#{$state} {
-              border-bottom-color: var(--#{$color}-color);
-              border-bottom-width: 1px;
-              border-bottom-style: solid;
-            }
-            .#{$m}#{$p}#{$c}t#{$s}#{$state} {
-              border-top-color: var(--#{$color}-color);
-              border-top-width: 1px;
-              border-top-style: solid;
-            }
-            .#{$m}#{$p}#{$c}l#{$s}#{$state} {
-              border-left-color: var(--#{$color}-color);
-              border-left-width: 1px;
-              border-left-style: solid;
-            }
-            .#{$m}#{$p}#{$c}r#{$s}#{$state} {
-              border-right-color: var(--#{$color}-color);
-              border-right-width: 1px;
-              border-right-style: solid;
+            @each $z, $side in $sides {
+              .#{$m}#{$p}#{$c}#{$z}#{$s}#{$state} {
+                border-#{$side}-color: var(--#{$color}-color);
+                --bc#{$z}-light-color: var(--#{$color}-light-color);
+                --bc#{$z}-dark-color: var(--#{$color}-dark-color);
+                border-#{$side}-width: 1px;
+                border-#{$side}-style: solid;
+              }
             }
             .#{$m}#{$p}#{$c}x#{$s}#{$state} {
               @extend .#{$m}#{$p}#{$c}r;
@@ -66,11 +103,30 @@ $props: (
             }
           }
         }
+        .#{$m}#{$p}l#{$s}#{$state} {
+          #{$prop}: var(--#{$p}-light-color);
+        }
+        .#{$m}#{$p}d#{$s}#{$state} {
+          #{$prop}: var(--#{$p}-dark-color);
+        }
+        @if $p == "bc" {
+          @each $v, $variation in $variations {
+            @each $z, $side in $sides {
+              .#{$m}#{$p}#{$v}#{$z}#{$s}#{$state} {
+                border-#{$side}-color: var(--bc#{$s}-#{$variation}-color, var(--bc-#{$variation}-color));
+              }
+            }
+            .#{$m}#{$p}#{$v}x#{$s}#{$state} {
+              @extend .#{$m}#{$p}#{$v}r;
+              @extend .#{$m}#{$p}#{$v}l;
+            }
+            .#{$m}#{$p}#{$v}y#{$s}#{$state} {
+              @extend .#{$m}#{$p}#{$v}t;
+              @extend .#{$m}#{$p}#{$v}b;
+            }
+          }
+        }
       }
     }
   }
-}
-
-body {
-  @extend .c12;
 }

@@ -1,0 +1,53 @@
+@import 'medias';
+
+$directions: (
+  "x": "justify-content",
+  "y": "align-content"
+);
+
+@each $m, $media in $medias {
+  @each $d, $direction in $directions {
+    @media #{$media} {
+      .#{$m}#{$d}#{if($d=="x",'l','t')} {
+        display: flex;
+        flex-wrap: wrap;
+        #{$direction}: flext-start;
+        @if $d == "x" {
+          text-align: left;
+        }
+      }
+      .#{$m}#{$d}#{$d} {
+        display: flex;
+        flex-wrap: wrap;
+        #{$direction}: center;
+        @if $d == "x" {
+          text-align: center;
+        }
+      }
+      .#{$m}#{$d}#{if($d=="x",'r','b')} {
+        display: flex;
+        flex-wrap: wrap;
+        #{$direction}: flex-end;
+        @if $d == "x" {
+          text-align: right;
+        }
+      }
+      .#{$m}#{$d}se {
+        display: flex;
+        flex-wrap: wrap;
+        #{$direction}: space-evenly;
+      }
+      .#{$m}#{$d}sa {
+        display: flex;
+        flex-wrap: wrap;
+        #{$direction}: space-around;
+      }
+      .#{$m}#{$d}sb {
+        display: flex;
+        flex-wrap: wrap;
+        #{$direction}: space-between;
+      }
+    }
+  }
+}
+

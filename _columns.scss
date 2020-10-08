@@ -1,0 +1,47 @@
+@import 'medias';
+
+:root {
+  --x-columns: 12;
+  --y-columns: 12;
+  --y-height: 100%;
+  --x-width: 100%;
+}
+
+$units: (
+  "vh": 100vh,
+  "vw": 100vw
+);
+
+$directions: (
+  "x": "width",
+  "y": "height"
+);
+
+$sufixes: (
+  "m": "min-",
+  "": ""
+);
+
+@each $m, $media in $medias {
+  @media #{$media} {
+    @each $d, $direction in $directions {
+      @for $c from 1 through 24 {
+        .#{$m}#{$d}n#{$c} {
+          #{"--"}#{$d}#{"-columns"}: #{$c};
+        }
+      }
+      @each $u, $unit in $units {
+        .#{$m}#{$d}#{$u} {
+          #{"--"}#{$d}#{"-"}#{$direction}: #{$unit};
+        }
+      }
+      @each $s, $sufix in $sufixes {
+        @for $i from 1 through 24 {
+          .#{$m}#{$d}#{$s}#{$i} {
+            #{$sufix}#{$direction}: calc((var(--#{$d}-#{$direction}) / var(--#{$d}-columns)) * #{$i}) !important;
+          }
+        }
+      }
+    }
+  }
+}

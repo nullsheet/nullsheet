@@ -1,65 +1,23 @@
-.ff1 {
-    font-weight: 300;
-    font-family: var(--primary-family);
-  }
-  
-  .ff2 {
-    font-weight: 300;
-    font-style: italic;
-    font-family: var(--primary-family);
-  }
-  
-  .ff3 {
-    font-family: var(--primary-family);
-  }
-  
-  .ff4 {
-    font-style: italic;
-    font-family: var(--primary-family);
-  }
-  
-  .ff5 {
-    font-weight: 700;
-    font-family: var(--primary-family);
-  }
-  
-  .ff6 {
-    font-weight: 700;
-    font-style: italic;
-    font-family: var(--primary-family);
-  }
+@import 'medias';
 
-  .ff7 {
-    font-weight: 300;
-    font-family: var(--secondary-family);
+:root {
+  --primary-font-family: 'Arial';
+  --secondary-font-family: 'Tahoma';
+  --tertiary-font-family: 'Tahoma';
+}
+
+$families: (
+  "1": "primary",
+  "2": "secondary",
+  "3": "tertiary",
+);
+
+@each $m, $media in $medias {
+  @media #{$media} {
+    @each $f, $family in $families {
+      .#{$m}ff#{$f} {
+        font-family: var(--#{$family}-font-family);
+      }
+    }
   }
-  
-  .ff8 {
-    font-weight: 300;
-    font-style: italic;
-    font-family: var(--secondary-family);
-  }
-  
-  .ff9 {
-    font-family: var(--secondary-family);
-  }
-  
-  .ff10 {
-    font-style: italic;
-    font-family: var(--secondary-family);
-  }
-  
-  .ff11 {
-    font-weight: 700;
-    font-family: var(--secondary-family);
-  }
-  
-  .ff12 {
-    font-weight: 700;
-    font-style: italic;
-    font-family: var(--secondary-family);
-  }
-  
-  body {
-    @extend .ff9;
-  }
+}
