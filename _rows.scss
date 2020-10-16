@@ -11,7 +11,7 @@ $directions: (
       .#{$m}#{$d}#{if($d=="x",'l','t')} {
         display: flex;
         flex-wrap: wrap;
-        #{$direction}: flext-start;
+        #{$direction}: flex-start;
         @if $d == "x" {
           text-align: left;
         }
@@ -50,4 +50,3 @@ $directions: (
     }
   }
 }
-

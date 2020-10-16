@@ -104,16 +104,16 @@ $variations: (
           }
         }
         .#{$m}#{$p}l#{$s}#{$state} {
-          #{$prop}: var(--#{$p}-light-color);
+          #{$prop}: var(--#{$p}#{$s}-light-color);
         }
         .#{$m}#{$p}d#{$s}#{$state} {
-          #{$prop}: var(--#{$p}-dark-color);
+          #{$prop}: var(--#{$p}#{$s}-dark-color);
         }
         @if $p == "bc" {
           @each $v, $variation in $variations {
             @each $z, $side in $sides {
               .#{$m}#{$p}#{$v}#{$z}#{$s}#{$state} {
-                border-#{$side}-color: var(--bc#{$s}-#{$variation}-color, var(--bc-#{$variation}-color));
+                border-#{$side}-color: var(--bc#{$s}#{$z}-#{$variation}-color, var(--bc-#{$variation}-color));
               }
             }
             .#{$m}#{$p}#{$v}x#{$s}#{$state} {
