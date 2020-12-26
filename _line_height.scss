@@ -1,14 +1,14 @@
 @import 'medias';
 
 :root {
-  --font-size: 0.25rem;
+  --line-height: 0.1;
 }
 
 @each $m, $media in $medias {
   @media #{$media} {
     @for $i from 1 through 24 {
-      .#{$m}fs#{$i} {
-        font-size: calc(#{$i} * var(--font-size));
+      .#{$m}lh#{$i} {
+        line-height: calc(#{$i} * var(--line-height));
       }
     }  
   }

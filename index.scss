@@ -1,31 +1,19 @@
 @import 'reset';
-
 @import 'spacers';
 @import 'positions';
 @import 'shadows';
 @import 'depths';
 @import 'hide';
-@import 'orders';
-
+@import 'flex_orders';
 @import 'containers';
 @import 'rows';
 @import 'columns';
-
 @import 'font_sizes';
 @import 'font_families';
 @import 'font_weights';
-
+@import 'line_height';
 @import 'colors';
-
-/* border size */
-/* line-height */
-/* italic */
-
-/* nx xn xs xc? */
-
-/* upercase - ttu tu t1 -> uppercase lowercase capitalize */
-/* cursor - tem caralhas*/
-
-/* border radius */
-
-/* border style */
+@import 'border_radius';
+@import 'border_width';
+@import 'text_transform';
+@import 'opacity';

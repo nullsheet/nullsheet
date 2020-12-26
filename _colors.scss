@@ -4,7 +4,7 @@
 
 :root {
 
-  /*identity colors*/
+  /* identity colors */
   --primary-color: #6b46c1;
   --primary-light-color: #8560fc;
   --primary-dark-color: #4d3793;
@@ -15,7 +15,7 @@
   --tertiary-light-color: #69f9cc;
   --tertiary-dark-color: #009B6F;
 
-  /*semantic colors*/
+  /* semantic colors */
   --success-color: #28a745;
   --success-light-color: #28a745;
   --success-dark-color: #28a745;
@@ -26,7 +26,7 @@
   --danger-light-color: #dc3545;
   --danger-dark-color: #dc3545;
 
-  /*markup colors*/
+  /* markup colors */
   --soft-color: #fff;
   --soft-light-color: transparent;
   --soft-dark-color: #f1f1f1;
@@ -65,8 +65,9 @@ $sides: (
 );
 
 $variations: (
-  "l": "light",
-  "d": "dark"
+  "": "",
+  "a": "light-",
+  "z": "dark-"
 );
 
 @each $m, $media in $medias {
@@ -74,55 +75,30 @@ $variations: (
     @each $s, $state in $states {
       @each $p, $prop in $props {
         @each $c, $color in $colors {
-          .#{$m}#{$p}#{$c}#{$s}#{$state} {
-            #{$prop}: var(--#{$color}-color);
-            #{"--"}#{$p}#{"-light-color"}: var(--#{$color}-light-color);
-            #{"--"}#{$p}#{"-dark-color"}: var(--#{$color}-dark-color);
-            @if $p == "bc" {
-              border-width: 1px;
-              border-style: solid;
-            }
-          }
-          @if $p == "bc" {
-            @each $z, $side in $sides {
-              .#{$m}#{$p}#{$c}#{$z}#{$s}#{$state} {
-                border-#{$side}-color: var(--#{$color}-color);
-                --bc#{$z}-light-color: var(--#{$color}-light-color);
-                --bc#{$z}-dark-color: var(--#{$color}-dark-color);
-                border-#{$side}-width: 1px;
-                border-#{$side}-style: solid;
-              }
-            }
-            .#{$m}#{$p}#{$c}x#{$s}#{$state} {
-              @extend .#{$m}#{$p}#{$c}r;
-              @extend .#{$m}#{$p}#{$c}l;
-            }
-            .#{$m}#{$p}#{$c}y#{$s}#{$state} {
-              @extend .#{$m}#{$p}#{$c}t;
-              @extend .#{$m}#{$p}#{$c}b;
-            }
-          }
-        }
-        .#{$m}#{$p}l#{$s}#{$state} {
-          #{$prop}: var(--#{$p}#{$s}-light-color);
-        }
-        .#{$m}#{$p}d#{$s}#{$state} {
-          #{$prop}: var(--#{$p}#{$s}-dark-color);
-        }
-        @if $p == "bc" {
           @each $v, $variation in $variations {
-            @each $z, $side in $sides {
-              .#{$m}#{$p}#{$v}#{$z}#{$s}#{$state} {
-                border-#{$side}-color: var(--bc#{$s}#{$z}-#{$variation}-color, var(--bc-#{$variation}-color));
+            .#{$m}#{$p}#{$c}#{$v}#{$s}#{$state} {
+              #{$prop}: var(--#{$color}-#{$variation}color);
+              @if $p == "bc" {
+                border-width: 1px;
+                border-style: solid;
               }
             }
-            .#{$m}#{$p}#{$v}x#{$s}#{$state} {
-              @extend .#{$m}#{$p}#{$v}r;
-              @extend .#{$m}#{$p}#{$v}l;
-            }
-            .#{$m}#{$p}#{$v}y#{$s}#{$state} {
-              @extend .#{$m}#{$p}#{$v}t;
-              @extend .#{$m}#{$p}#{$v}b;
+            @if $p == "bc" {
+              @each $z, $side in $sides {
+                .#{$m}#{$p}#{$c}#{$v}#{$z}#{$s}#{$state} {
+                  border-#{$side}-color: var(--#{$color}-#{$variation}color);
+                  border-#{$side}-width: 1px;
+                  border-#{$side}-style: solid;
+                }
+              }
+              .#{$m}#{$p}#{$c}#{$v}x#{$s}#{$state} {
+                @extend .#{$m}#{$p}#{$c}r;
+                @extend .#{$m}#{$p}#{$c}l;
+              }
+              .#{$m}#{$p}#{$c}#{$v}y#{$s}#{$state} {
+                @extend .#{$m}#{$p}#{$c}t;
+                @extend .#{$m}#{$p}#{$c}b;
+              }
             }
           }
         }
