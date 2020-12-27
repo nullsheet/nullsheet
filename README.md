@@ -50,18 +50,21 @@
   /* ultilities */
   --border-radius: 0.25rem;
   --line-height: 0.1;
-  --opacity: 0.5;
+  --opacity: 0.05;
   --spacer: 0.25rem;
+  --box-shadow: 2px;
 
 }
 ```
+
+medias = xs: sm- sm: sm+ md- md: md+ lg- lg: lg+ xl: pt:
 
 ## Colors
 
 - variation = a z
 - number = 1 2 3
 - type = i s m
-- state = h a f // rethink
+- state = :h :a :f
 
 ### Background Colors
 
@@ -211,9 +214,13 @@
 .(media)m[number](position)
 ```
 
-## Shadows
+## Box Shadows
 
-???
+- number = 0 ... 24
+
+```
+.(media)bs[number]
+```
 
 ## Containers
 
@@ -236,10 +243,6 @@
 ```
 .(media)tt[variation]
 ```
-
-## Cursor
-
-???
 
 ## Line Height
 
