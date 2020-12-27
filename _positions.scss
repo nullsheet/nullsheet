@@ -21,7 +21,7 @@ $axesx: (
     @each $p, $position in $positions {
       @each $y, $axisy in $axesy {
         @each $x, $axisx in $axesx {
-          .#{$m}#{$p}#{$y}#{$x} {
+          .#{$m}p#{$p}#{$y}#{$x} {
             position: #{$position};
             #{$axisx}: 0;
             #{$axisy}: 0;

@@ -18,16 +18,17 @@ $directions: (
 );
 
 $sufixes: (
-  "m": "min-",
+  "a": "min-",
+  "z": "max-",
   "": ""
 );
 
 @each $m, $media in $medias {
   @media #{$media} {
     @each $d, $direction in $directions {
-      @for $c from 1 through 24 {
-        .#{$m}#{$d}n#{$c} {
-          #{"--"}#{$d}#{"-columns"}: #{$c};
+      @for $i from 1 through 24 {
+        .#{$m}#{$d}n#{$i} {
+          #{"--"}#{$d}#{"-columns"}: #{$i};
         }
       }
       @each $u, $unit in $units {
@@ -37,7 +38,7 @@ $sufixes: (
       }
       @each $s, $sufix in $sufixes {
         @for $i from 1 through 24 {
-          .#{$m}#{$d}#{$s}#{$i} {
+          .#{$m}#{$d}#{$i}#{$s} {
             #{$sufix}#{$direction}: calc((var(--#{$d}-#{$direction}) / var(--#{$d}-columns)) * #{$i}) !important;
           }
         }

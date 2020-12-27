@@ -1,0 +1,17 @@
+@import 'medias';
+
+$values: (
+  "u": "lowercase",
+  "l": "uppercase",
+  "c": "capitalize"
+);
+
+@each $m, $media in $medias {
+  @media #{$media} {
+    @each $v, $value in $values {
+      .#{$m}tt#{$v} {
+        text-transform: #{$value};
+      }
+    }  
+  }
+}

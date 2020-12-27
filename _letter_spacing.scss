@@ -1,0 +1,15 @@
+@import 'medias';
+
+:root {
+  --letter-spacing: 0.1px;
+}
+
+@each $m, $media in $medias {
+  @media #{$media} {
+    @for $i from 0 through 24 {
+      .#{$m}ls#{$i} {
+        letter-spacing: calc(#{$i} * var(--letter-spacing));
+      }
+    }  
+  }
+}

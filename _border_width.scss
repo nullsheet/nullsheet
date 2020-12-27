@@ -1,0 +1,29 @@
+@import 'medias';
+
+$positions: (
+  "": "",
+  "t": "top-",
+  "b": "bottom-",
+  "l": "left-",
+  "r": "right-"
+);
+
+@each $m, $media in $medias {
+  @media #{$media} {
+    @each $p, $position in $positions {
+      @for $i from 0 through 24 {
+        .#{$m}bw#{$i}#{$p} {
+          border-#{$position}width: #{$i}px;
+        }
+        .#{$m}bw#{$i}x {
+          @extend .#{$m}bw#{$i}l;
+          @extend .#{$m}bw#{$i}r;
+        }
+        .#{$m}bw#{$i}y {
+          @extend .#{$m}bw#{$i}t;
+          @extend .#{$m}bw#{$i}b;
+        }
+      }  
+    }
+  }
+}

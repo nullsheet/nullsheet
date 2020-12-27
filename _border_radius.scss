@@ -1,0 +1,41 @@
+@import 'medias';
+
+:root {
+  --border-radius: 0.25rem;
+}
+
+$positions: (
+  "": "",
+  "tl": "top-left-",
+  "tr": "top-right-",
+  "bl": "bottom-left-",
+  "br": "bottom-right-"
+);
+
+@each $m, $media in $medias {
+  @media #{$media} {
+    @each $p, $position in $positions {
+      @for $i from 0 through 24 {
+        .#{$m}br#{$i}#{$p} {
+          border-#{$position}radius: calc(#{$i} * var(--border-radius));
+        }
+        .#{$m}br#{$i}l {
+          @extend .#{$m}br#{$i}tl;
+          @extend .#{$m}br#{$i}bl;
+        }
+        .#{$m}br#{$i}r {
+          @extend .#{$m}br#{$i}tr;
+          @extend .#{$m}br#{$i}br;
+        }
+        .#{$m}br#{$i}b {
+          @extend .#{$m}br#{$i}bl;
+          @extend .#{$m}br#{$i}br;
+        }
+        .#{$m}br#{$i}t {
+          @extend .#{$m}br#{$i}tl;
+          @extend .#{$m}br#{$i}tr;
+        }
+      }  
+    }
+  }
+}
