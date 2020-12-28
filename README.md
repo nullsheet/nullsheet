@@ -41,12 +41,6 @@
   --secondary-font-family: 'Tahoma';
   --tertiary-font-family: 'Tahoma';
 
-  /* columns */
-  --x-columns: 12;
-  --y-columns: 12;
-  --y-height: 100%;
-  --x-width: 100%;
-
   /* ultilities */
   --border-radius: 0.25rem;
   --line-height: 0.1;

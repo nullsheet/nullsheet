@@ -9654,6 +9654,26 @@ body * {
   .prbr {
     position: relative;
     right: 0;
+    bottom: 0; }
+
+  .pstl {
+    position: sticky;
+    left: 0;
+    top: 0; }
+
+  .pstr {
+    position: sticky;
+    right: 0;
+    top: 0; }
+
+  .psbl {
+    position: sticky;
+    left: 0;
+    bottom: 0; }
+
+  .psbr {
+    position: sticky;
+    right: 0;
     bottom: 0; } }
 @media (max-width: 576px) {
   .xs\:pftl {
@@ -9713,6 +9733,26 @@ body * {
 
   .xs\:prbr {
     position: relative;
+    right: 0;
+    bottom: 0; }
+
+  .xs\:pstl {
+    position: sticky;
+    left: 0;
+    top: 0; }
+
+  .xs\:pstr {
+    position: sticky;
+    right: 0;
+    top: 0; }
+
+  .xs\:psbl {
+    position: sticky;
+    left: 0;
+    bottom: 0; }
+
+  .xs\:psbr {
+    position: sticky;
     right: 0;
     bottom: 0; } }
 @media (max-width: 768px) {
@@ -9774,6 +9814,26 @@ body * {
   .sm\-prbr {
     position: relative;
     right: 0;
+    bottom: 0; }
+
+  .sm\-pstl {
+    position: sticky;
+    left: 0;
+    top: 0; }
+
+  .sm\-pstr {
+    position: sticky;
+    right: 0;
+    top: 0; }
+
+  .sm\-psbl {
+    position: sticky;
+    left: 0;
+    bottom: 0; }
+
+  .sm\-psbr {
+    position: sticky;
+    right: 0;
     bottom: 0; } }
 @media (min-width: 576px) and (max-width: 768px) {
   .sm\:pftl {
@@ -9833,6 +9893,26 @@ body * {
 
   .sm\:prbr {
     position: relative;
+    right: 0;
+    bottom: 0; }
+
+  .sm\:pstl {
+    position: sticky;
+    left: 0;
+    top: 0; }
+
+  .sm\:pstr {
+    position: sticky;
+    right: 0;
+    top: 0; }
+
+  .sm\:psbl {
+    position: sticky;
+    left: 0;
+    bottom: 0; }
+
+  .sm\:psbr {
+    position: sticky;
     right: 0;
     bottom: 0; } }
 @media (min-width: 576px) {
@@ -9894,6 +9974,26 @@ body * {
   .sm\+prbr {
     position: relative;
     right: 0;
+    bottom: 0; }
+
+  .sm\+pstl {
+    position: sticky;
+    left: 0;
+    top: 0; }
+
+  .sm\+pstr {
+    position: sticky;
+    right: 0;
+    top: 0; }
+
+  .sm\+psbl {
+    position: sticky;
+    left: 0;
+    bottom: 0; }
+
+  .sm\+psbr {
+    position: sticky;
+    right: 0;
     bottom: 0; } }
 @media (max-width: 992px) {
   .md\-pftl {
@@ -9953,6 +10053,26 @@ body * {
 
   .md\-prbr {
     position: relative;
+    right: 0;
+    bottom: 0; }
+
+  .md\-pstl {
+    position: sticky;
+    left: 0;
+    top: 0; }
+
+  .md\-pstr {
+    position: sticky;
+    right: 0;
+    top: 0; }
+
+  .md\-psbl {
+    position: sticky;
+    left: 0;
+    bottom: 0; }
+
+  .md\-psbr {
+    position: sticky;
     right: 0;
     bottom: 0; } }
 @media (min-width: 768px) and (max-width: 992px) {
@@ -10014,6 +10134,26 @@ body * {
   .md\:prbr {
     position: relative;
     right: 0;
+    bottom: 0; }
+
+  .md\:pstl {
+    position: sticky;
+    left: 0;
+    top: 0; }
+
+  .md\:pstr {
+    position: sticky;
+    right: 0;
+    top: 0; }
+
+  .md\:psbl {
+    position: sticky;
+    left: 0;
+    bottom: 0; }
+
+  .md\:psbr {
+    position: sticky;
+    right: 0;
     bottom: 0; } }
 @media (min-width: 768px) {
   .md\+pftl {
@@ -10073,6 +10213,26 @@ body * {
 
   .md\+prbr {
     position: relative;
+    right: 0;
+    bottom: 0; }
+
+  .md\+pstl {
+    position: sticky;
+    left: 0;
+    top: 0; }
+
+  .md\+pstr {
+    position: sticky;
+    right: 0;
+    top: 0; }
+
+  .md\+psbl {
+    position: sticky;
+    left: 0;
+    bottom: 0; }
+
+  .md\+psbr {
+    position: sticky;
     right: 0;
     bottom: 0; } }
 @media (max-width: 1200px) {
@@ -10134,6 +10294,26 @@ body * {
   .lg\-prbr {
     position: relative;
     right: 0;
+    bottom: 0; }
+
+  .lg\-pstl {
+    position: sticky;
+    left: 0;
+    top: 0; }
+
+  .lg\-pstr {
+    position: sticky;
+    right: 0;
+    top: 0; }
+
+  .lg\-psbl {
+    position: sticky;
+    left: 0;
+    bottom: 0; }
+
+  .lg\-psbr {
+    position: sticky;
+    right: 0;
     bottom: 0; } }
 @media (min-width: 992px) and (max-width: 1200px) {
   .lg\:pftl {
@@ -10193,6 +10373,26 @@ body * {
 
   .lg\:prbr {
     position: relative;
+    right: 0;
+    bottom: 0; }
+
+  .lg\:pstl {
+    position: sticky;
+    left: 0;
+    top: 0; }
+
+  .lg\:pstr {
+    position: sticky;
+    right: 0;
+    top: 0; }
+
+  .lg\:psbl {
+    position: sticky;
+    left: 0;
+    bottom: 0; }
+
+  .lg\:psbr {
+    position: sticky;
     right: 0;
     bottom: 0; } }
 @media (min-width: 992px) {
@@ -10254,6 +10454,26 @@ body * {
   .lg\+prbr {
     position: relative;
     right: 0;
+    bottom: 0; }
+
+  .lg\+pstl {
+    position: sticky;
+    left: 0;
+    top: 0; }
+
+  .lg\+pstr {
+    position: sticky;
+    right: 0;
+    top: 0; }
+
+  .lg\+psbl {
+    position: sticky;
+    left: 0;
+    bottom: 0; }
+
+  .lg\+psbr {
+    position: sticky;
+    right: 0;
     bottom: 0; } }
 @media (min-width: 1200px) {
   .xl\:pftl {
@@ -10314,6 +10534,26 @@ body * {
   .xl\:prbr {
     position: relative;
     right: 0;
+    bottom: 0; }
+
+  .xl\:pstl {
+    position: sticky;
+    left: 0;
+    top: 0; }
+
+  .xl\:pstr {
+    position: sticky;
+    right: 0;
+    top: 0; }
+
+  .xl\:psbl {
+    position: sticky;
+    left: 0;
+    bottom: 0; }
+
+  .xl\:psbr {
+    position: sticky;
+    right: 0;
     bottom: 0; } }
 @media print {
   .pt\:pftl {
@@ -10373,6 +10613,26 @@ body * {
 
   .pt\:prbr {
     position: relative;
+    right: 0;
+    bottom: 0; }
+
+  .pt\:pstl {
+    position: sticky;
+    left: 0;
+    top: 0; }
+
+  .pt\:pstr {
+    position: sticky;
+    right: 0;
+    top: 0; }
+
+  .pt\:psbl {
+    position: sticky;
+    left: 0;
+    bottom: 0; }
+
+  .pt\:psbr {
+    position: sticky;
     right: 0;
     bottom: 0; } }
 :root {
